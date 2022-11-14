@@ -15,6 +15,7 @@ gem install ucl_last_16_draw-0.0.0.gem
 or
 
 You can install it from https://rubygems.org.
+Run command `gem install ucl_last_16_draw`
 
 ## Prepare your winners and runners up teams
 Let's say we have two group of teams like below

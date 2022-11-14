@@ -16,7 +16,7 @@ or
 
 You can install it from https://rubygems.org.
 
-### Prepare your winners and runners up teams
+## Prepare your winners and runners up teams
 Let's say we have two group of teams like below
 ```
 winners_list = [
@@ -42,7 +42,7 @@ runners_up_list = [
 ]
 ```
 
-Embed `ucl_last_16_draw` gem to use its feature.
+## Embed `ucl_last_16_draw` gem to use its feature.
 ```
 require 'ucl_last_16_draw'
 
@@ -51,21 +51,45 @@ result = UCLLast16Draw::Participants.new({winners: winners_list, runners_up: run
 # if you need value only, without any formatting
 teams = result.generate_draw
 ```
-`teams` output has pure value if you want to format it by yours
+`teams` output has randomized with pure value. So, if you want to format it by yours will be no problem.
 ```
 [
-    [{:group=>"F", :name=>"Real Madrid", :country=>"Spain"}, {:group=>"E", :name=>"AC Milan", :country=>"Italy"}],
-    [{:group=>"G", :name=>"Manchester City", :country=>"England"}, {"group"=>"H", :name=>"Paris Saint-Germain", :country=>"France"}],
-    [{:group=>"A", :name=>"Napoli", :country=>"Italy"}, {:group=>"B", :name=>"Club Brugge", :country=>"Belgium"}],
-    [{:group=>"H", :name=>"Benfica", :country=>"Portugal"}, {:group=>"C", :name=>"Inter Milan", :country=>"Italy"}],
-    [{:group=>"C", :name=>"Bayern Munich", :country=>"Germany"}, {:group=>"A", :name=>"Liverpool", :country=>"England"}],
-    [{:group=>"D", :name=>"Tottenham Hotspur", :country=>"England"}, {:group=>"F", :name=>"RB Leipzig", :country=>"Germany"}],
-    [{:group=>"B", :name=>"Porto", :country=>"Portugal"}, {:group=>"D", :name=>"Eintracht Frankfurt", :country=>"Germany"}],
-    [{:group=>"E", :name=>"Chelsea", :country=>"England"}, {:group=>"G", :name=>"Borussia Dortmund", :country=>"Germany"}]
+  [
+    {:group=>"F", :name=>"Real Madrid", :country=>"Spain"},
+    {:group=>"E", :name=>"AC Milan", :country=>"Italy"}
+  ],
+  [
+    {:group=>"G", :name=>"Manchester City", :country=>"England"},
+    {"group"=>"H", :name=>"Paris Saint-Germain", :country=>"France"}
+  ],
+  [
+    {:group=>"A", :name=>"Napoli", :country=>"Italy"},
+    {:group=>"B", :name=>"Club Brugge", :country=>"Belgium"}
+  ],
+  [
+    {:group=>"H", :name=>"Benfica", :country=>"Portugal"},
+    {:group=>"C", :name=>"Inter Milan", :country=>"Italy"}
+  ],
+  [
+    {:group=>"C", :name=>"Bayern Munich", :country=>"Germany"},
+    {:group=>"A", :name=>"Liverpool", :country=>"England"}
+  ],
+  [
+    {:group=>"D", :name=>"Tottenham Hotspur", :country=>"England"},
+    {:group=>"F", :name=>"RB Leipzig", :country=>"Germany"}
+  ],
+  [
+    {:group=>"B", :name=>"Porto", :country=>"Portugal"},
+    {:group=>"D", :name=>"Eintracht Frankfurt", :country=>"Germany"}
+  ],
+  [
+    {:group=>"E", :name=>"Chelsea", :country=>"England"},
+    {:group=>"G", :name=>"Borussia Dortmund", :country=>"Germany"}
+  ]
 ]
 ```
 
-### Making readable output
+## Making readable output
 ```# simple beutify output
 puts result.print_draw
 ```
@@ -96,3 +120,5 @@ If you still confused, please run `~ruby example.rb` in your machine after insta
 Enjoy it!
 
 **Rido Atmanto**
+
+*Created: November 14th 2022*
